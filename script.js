@@ -4,17 +4,27 @@ const resultParagraph = document.getElementById("result");
 
 
 const checkPalindrome = (text) => {
-  const cleaned = text.toLowerCase().replace(/[^a-z0-9\u00C0-\u024F\u1E00-\u1EFF]/g, '');
+  const cleaned = text.toLowerCase().replace(/[^a-z0-9\u00C0-\u024F\u1E00-\u1EFF]/g, ''); /* le regex dit toutes les lettres, chiffres et accents ne sont pas concernés par le clean grâce au ^ */
   const reverse = cleaned.split("").reverse().join("");
-  return cleaned === reverse;
+  if (cleaned.length <= 1) {
+    return false;
+  }
+  return cleaned === reverse; /* comme c'est un return de deux valeurs comparés par un operateur ça retourne un boulean */
 }
 
+
+palindromeInput.addEventListener("keypress", (event) => {
+  if(event.key === "Enter") {
+    checkButton.click();
+  }
+})
 checkButton.addEventListener("click", () => {
   const text = palindromeInput.value;
   if(text === "") {
     alert("Please input a value");
     return;
   }
+ 
 
   if(checkPalindrome(text)) {
     resultParagraph.innerText = `${text} is a palindrome`;
