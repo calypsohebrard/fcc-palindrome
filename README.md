@@ -1,7 +1,9 @@
 # 🧠 Palindrome Checker
 
 Ce projet fait partie du parcours [JavaScript Algorithms and Data Structures Certification (v8)](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/) de freeCodeCamp. Il s'agit d'un vérificateur de palindromes : une fonction qui détermine si une chaîne de caractères est un palindrome, en ignorant la casse, la ponctuation et les espaces.
-🔗 Live Website: https://calypsohebrard.github.io/fcc-palindrome/
+
+##🔗 Live Website:
+https://calypsohebrard.github.io/fcc-palindrome/
 
 ## 📋 Objectif
 
