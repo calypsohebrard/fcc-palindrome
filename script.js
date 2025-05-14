@@ -23,8 +23,12 @@ checkButton.addEventListener("click", () => {
   if(text === "") {
     alert("Please input a value");
     return;
+  } 
+
+  if(!/[a-zA-Z]/.test(text)) {
+    resultParagraph.innerText = `${text} is not a palindrome`;
   }
- 
+  
 
   if(checkPalindrome(text)) {
     resultParagraph.innerText = `${text} is a palindrome`;
